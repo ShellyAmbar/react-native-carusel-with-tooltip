@@ -1,5 +1,5 @@
 {
-  "name": "react-native-carusel-with-tooltip",
+  "name": "react-native-carusel-tooltip",
   "version": "1.0.0",
   "main": "index.tsx",
   "scripts": {
@@ -7,11 +7,24 @@
   },
   "author": "shelly ambar",
   "license": "ISC",
-  "description": "",
+  "description": "react native carusel with tooltip",
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*",
     "react-native-reanimated": "*"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShellyAmbar/react-native-carusel-with-tooltip.git"
+  },
+  "keywords": [
+    "carusel",
+    "tooltip",
+    "react-native"
+  ],
+  "bugs": {
+    "url": "https://github.com/ShellyAmbar/react-native-carusel-with-tooltip/issues"
+  },
+  "homepage": "https://github.com/ShellyAmbar/react-native-carusel-with-tooltip#readme"
 }
