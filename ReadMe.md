@@ -48,3 +48,4 @@ import Loading from 'react-native-carusel-tooltip';
 | tooltipBorderWidth?     | number;                  |
 | tooltipBackgroundColor? | string;                  |
 | showGradiant?           | boolean;                 |
+| tooltiPwraperDetailes?  | ViewStyle                |
