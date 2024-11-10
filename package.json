@@ -1,0 +1,17 @@
+{
+  "name": "react-native-carusel-with-tooltip",
+  "version": "1.0.0",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shelly ambar",
+  "license": "ISC",
+  "description": "",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-svg": "*",
+    "react-native-reanimated": "*"
+  }
+}
