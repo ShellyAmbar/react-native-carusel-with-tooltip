@@ -42,8 +42,8 @@ const NotchedContainer: React.FC<NotchedContainerProps> = ({
     <View style={{...styles.wrapper, ...{...wraperStyle}}}>
       <Svg
         width={tooltipWidth + borderWidth * 2}
-        height={tooltipHeight + borderWidth * 2}
-        viewBox={`0 0 ${tooltipWidth} ${tooltipHeight}`}
+        height={tooltipHeight + borderWidth * 2 + arrowHeight}
+        viewBox={`0 0 ${tooltipWidth} ${tooltipHeight + arrowHeight}`}
       >
         {showGradiant && (
           <Defs>
@@ -57,22 +57,20 @@ const NotchedContainer: React.FC<NotchedContainerProps> = ({
         {/* Tooltip arrow with gradient */}
         <Path
           d={`
-            M ${cornerRadius} ${arrowHeight} 
-            h ${tooltipWidth - 2 * cornerRadius} 
-            a ${cornerRadius} ${cornerRadius} 0 0 1 ${cornerRadius} ${cornerRadius} 
-            v ${tooltipHeight - arrowHeight - 2 * cornerRadius} 
-            a ${cornerRadius} ${cornerRadius} 0 0 1 -${cornerRadius} ${cornerRadius} 
-            h -${tooltipWidth - 2 * cornerRadius} 
-            a ${cornerRadius} ${cornerRadius} 0 0 1 -${cornerRadius} -${cornerRadius} 
-            v -${tooltipHeight - arrowHeight - 2 * cornerRadius} 
-            a ${cornerRadius} ${cornerRadius} 0 0 1 ${cornerRadius} -${cornerRadius} 
-            z 
-            M ${tooltipWidth / 2 - 10} ${arrowHeight} 
-            L ${tooltipWidth / 2} 0
-            L ${tooltipWidth / 2 + 10} ${arrowHeight} 
-            
-            Z
-          `}
+                M ${tooltipWidth / 2 - 10} ${arrowHeight} 
+                L ${tooltipWidth / 2} 0
+                L ${tooltipWidth / 2 + 10} ${arrowHeight} 
+      
+                H ${tooltipWidth - cornerRadius} 
+                a ${cornerRadius} ${cornerRadius} 0 0 1 ${cornerRadius} ${cornerRadius}
+                V ${tooltipHeight + arrowHeight - cornerRadius}
+                a ${cornerRadius} ${cornerRadius} 0 0 1 -${cornerRadius} ${cornerRadius}
+                H ${cornerRadius}
+                a ${cornerRadius} ${cornerRadius} 0 0 1 -${cornerRadius} -${cornerRadius}
+                V ${arrowHeight + cornerRadius}
+                a ${cornerRadius} ${cornerRadius} 0 0 1 ${cornerRadius} -${cornerRadius}
+                Z
+              `}
           fill={showGradiant ? "url(#tooltipGradient)" : backgroundColor}
           stroke={borderColor}
           strokeWidth={borderWidth}
