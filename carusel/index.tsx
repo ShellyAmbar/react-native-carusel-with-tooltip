@@ -17,6 +17,7 @@ interface CaruselProps {
   tooltipBorderWidth?: number;
   tooltipBackgroundColor?: string;
   showGradiant?: boolean;
+  tooltiPwraperDetailes?: ViewStyle;
 }
 const Carousel = ({
   data,
@@ -32,6 +33,7 @@ const Carousel = ({
   tooltipBorderWidth = 1,
   tooltipBackgroundColor = "white",
   showGradiant = false,
+  tooltiPwraperDetailes,
 }: CaruselProps) => {
   const styles = createStyle({spacing});
   const [viewportWidth, setViewportWidth] = useState(0);
@@ -124,8 +126,7 @@ const Carousel = ({
 
       <NotchedContainer
         showGradiant={showGradiant}
-        wraperStyle={styles.wraperDetailes}
-        contentStyle={styles.contentDetails}
+        wraperStyle={{...styles.wraperDetailes, ...{...tooltiPwraperDetailes}}}
         borderColor={tooltipBorderColor}
         endColor={tooltipGradiant[1]}
         startColor={tooltipGradiant[0]}

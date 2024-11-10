@@ -51,6 +51,7 @@ const example = () => {
   return (
     <View style={styles.container}>
       <CircularCarousel
+        tooltiPwraperDetailes={{}}
         numOfVisibleItems={7}
         spacing={10}
         tooltipContentView={
