@@ -15,7 +15,6 @@ const createStyle = ({spacing}: {spacing: number}) =>
       flex: 1,
     },
 
-    contentDetails: {},
     wraperDetailes: {
       marginTop: 10,
       alignItems: "center",
