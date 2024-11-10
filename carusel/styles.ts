@@ -20,6 +20,11 @@ const createStyle = ({spacing}: {spacing: number}) =>
       alignItems: "center",
       justifyContent: "center",
     },
+    itemLable: {
+      color: "white",
+      fontSize: 16,
+      textAlign: "center",
+    },
   });
 
 export default createStyle;

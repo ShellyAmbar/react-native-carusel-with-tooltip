@@ -1,5 +1,12 @@
 import React, {useEffect, useRef, useState} from "react";
-import {View, Animated, TouchableOpacity, ViewStyle} from "react-native";
+import {
+  View,
+  Animated,
+  TouchableOpacity,
+  ViewStyle,
+  TextStyle,
+  Text,
+} from "react-native";
 import createStyle from "./styles";
 import NotchedContainer from "./notch";
 
@@ -18,6 +25,8 @@ interface CaruselProps {
   tooltipBackgroundColor?: string;
   showGradiant?: boolean;
   tooltiPwraperDetailes?: ViewStyle;
+  itemLableStyle?: TextStyle;
+  showLable?: boolean;
 }
 const Carousel = ({
   data,
@@ -34,6 +43,8 @@ const Carousel = ({
   tooltipBackgroundColor = "white",
   showGradiant = false,
   tooltiPwraperDetailes,
+  itemLableStyle,
+  showLable = true,
 }: CaruselProps) => {
   const styles = createStyle({spacing});
   const [viewportWidth, setViewportWidth] = useState(0);
@@ -118,6 +129,11 @@ const Carousel = ({
                 >
                   <View style={styles.itemContent}></View>
                 </Animated.View>
+                {showLable && (
+                  <Text style={{...styles.itemLable, ...itemLableStyle}}>
+                    {index + 1}
+                  </Text>
+                )}
               </TouchableOpacity>
             );
           }}
