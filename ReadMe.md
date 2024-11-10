@@ -4,12 +4,12 @@
 
 # Example:
 
-![](./assets/carusel.gif)
+![](./carusel/assets/1.gif)
 
 ## How to use:
 
 ```
-import Loading from 'react-native-carusel-with-tooltip';
+import Loading from 'react-native-carusel-tooltip';
 
   <CircularCarousel
         numOfVisibleItems={7}
@@ -33,16 +33,18 @@ import Loading from 'react-native-carusel-with-tooltip';
 
 # Props -
 
-data: any[];
-tooltipContentView: React.ReactNode;
-selectetItemIndex: number;
-setSelectetItemIndex: (index: number) => void;
-numOfVisibleItems?: number;
-spacing?: number;
-rectStyle?: ViewStyle;
-tooltipGradiant?: string[];
-tooltipBorderColor?: string;
-tooltipBorderRadius?: number;
-tooltipBorderWidth?: number;
-tooltipBackgroundColor?: string;
-showGradiant?: boolean;
+| Name                    | Type                     | Default |
+| ----------------------- | ------------------------ | ------- |
+| data                    | any[]                    |
+| tooltipContentView      | React.ReactNode;         |
+| selectetItemIndex       | number;                  |
+| setSelectetItemIndex    | (index: number) => void; |
+| numOfVisibleItems?      | number;                  |
+| spacing?                | number;                  |
+| rectStyle?              | ViewStyle;               |
+| tooltipGradiant?        | string[];                |
+| tooltipBorderColor?     | string;                  |
+| tooltipBorderRadius?    | number;                  |
+| tooltipBorderWidth?     | number;                  |
+| tooltipBackgroundColor? | string;                  |
+| showGradiant?           | boolean;                 |
